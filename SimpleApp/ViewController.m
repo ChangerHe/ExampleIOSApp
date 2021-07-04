@@ -13,9 +13,15 @@
 
 @implementation ViewController
 
+- (void)viewDidAppear {
+    [super viewDidAppear:false];
+    NSLog(@"view appeared");
+}
+
 // 视图渲染完成的生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"view loaded");
     // Do any additional setup after loading the view.
     [self.view addSubview:({
         UILabel *label = [[UILabel alloc] init];
