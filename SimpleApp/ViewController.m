@@ -7,21 +7,67 @@
 
 #import "ViewController.h"
 
+@interface TestView: UIView
+
+@end
+
+@implementation TestView
+
+// 创建init函数, 重载init方法
+- (instancetype)init{
+    self = [super init];
+    return self;
+}
+
+- (void)willMoveToSuperview:(nullable UIView *)newSuperview{
+    [super willMoveToSuperview:newSuperview];
+    NSLog(@"willMoveToSuperview", newSuperview);
+}
+
+// 生成的UIView已经到了父View中
+- (void)didMoveToSuperview{
+    [super didMoveToSuperview];
+    NSLog(@"didMoveToSuperview");
+}
+
+- (void)willMoveToWindow:(nullable UIWindow *)newWindow{
+    [super willMoveToWindow:newWindow];
+    NSLog(@"willMoveToWindow", newWindow);
+}
+
+- (void)didMoveToWindow{
+    [super didMoveToWindow];
+    NSLog(@"didMoveToWindow");
+}
+
+@end
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-
-- (void)viewDidAppear {
-    [super viewDidAppear:false];
-    NSLog(@"view appeared");
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"viewDidAppear");
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillDisappear");
+}
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSLog(@"viewDidDisappear");
 }
 
 // 视图渲染完成的生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"view loaded");
+    NSLog(@"viewDidLoad");
     // 初始化一个hello world
     [self.view addSubview:({
         UILabel *label = [[UILabel alloc] init];
@@ -34,7 +80,7 @@
     
     // 创建一个红色块, 距离为100, 100, 宽高为100, 100
     // 初始化UIView, 在视图中申请空间
-    UIView *view = [[UIView alloc] init];
+    TestView *view = [[TestView alloc] init];
     // 设置其背景色
     view.backgroundColor = [UIColor redColor];
     // 设置其布局方式, x,y为100, 宽高为100
