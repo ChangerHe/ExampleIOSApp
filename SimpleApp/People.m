@@ -23,6 +23,7 @@ static NSString *_peopleName1;
 + (void) test {
     NSLog(@"+hao  test");
     // 在+号方法中, 只能调用静态变量
+    // 其他
     _peopleName1 = @"222";
 }
 
