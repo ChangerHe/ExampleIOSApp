@@ -23,12 +23,36 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "People.h"
 
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
+        
+        // 实例化对象  [类名  方法名]   或者  [对象名 方法名]
+        // alloc用来为对象分配内存空间
+        // init 用来进行初始化操作
+        People *p1 = [[People alloc] init];
+        // 使用new的方式也可以生成一个实例化对象
+        People *p2 = [People new];
+        
+        p1.peopleName = @"张三";
+        p2.peopleName = @"lisi";
+        // 当装饰符为public时, 可以这样进行调用, 但不推荐这样使用
+//        p2->_peopleName;
+        NSLog(@"p1 peoplename %@", p1.peopleName);
+        NSLog(@"p2 peoplename %@", p2.peopleName);
+        
+        // 调用-号方法的report
+        [p1 report];
+        // 调用+号方法的test
+        [People test];
+        NSLog(@"p1 --- %p %a", p1, p2);
+        NSLog(@"p2 --- %d", p2);
+        
+        
     }
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理
     //     argc: 参数个数

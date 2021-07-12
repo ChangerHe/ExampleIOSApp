@@ -14,6 +14,7 @@
 		747A27E22692101400F4253C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747A27E12692101400F4253C /* Assets.xcassets */; };
 		747A27E52692101400F4253C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747A27E32692101400F4253C /* LaunchScreen.storyboard */; };
 		747A27E82692101400F4253C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 747A27E72692101400F4253C /* main.m */; };
+		7483779A269C727200B0F323 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 74837799269C727200B0F323 /* People.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		747A27E42692101400F4253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		747A27E62692101400F4253C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747A27E72692101400F4253C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74837798269C727200B0F323 /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		74837799269C727200B0F323 /* People.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				747A27E32692101400F4253C /* LaunchScreen.storyboard */,
 				747A27E62692101400F4253C /* Info.plist */,
 				747A27E72692101400F4253C /* main.m */,
+				74837798269C727200B0F323 /* People.h */,
+				74837799269C727200B0F323 /* People.m */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			files = (
 				747A27DD2692101300F4253C /* ViewController.m in Sources */,
 				747A27D72692101300F4253C /* AppDelegate.m in Sources */,
+				7483779A269C727200B0F323 /* People.m in Sources */,
 				747A27E82692101400F4253C /* main.m in Sources */,
 				747A27DA2692101300F4253C /* SceneDelegate.m in Sources */,
 			);
