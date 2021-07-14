@@ -24,11 +24,18 @@ NS_ASSUME_NONNULL_BEGIN
 // 其实等同于暴露了对应属性的getter和setter方法
 // 所以 当我们需要使用这个名称的时候, 需要进行一次指向操作, 指向成员变量的对应值
 @property(nonatomic, strong)NSString *peopleName;
+@property(nonatomic, readwrite)NSInteger *peopleAge;
 
 // + 代表类方法  - 代表实例方法, 类方法不通过实例即可调用
 - (void) report;
 
 + (void) test;
+
+// 带参方法
+- (int)showWithA:(int)a;
+- (int)showWithA:(int)a andB: (int)b;
+
+- (instancetype)initWithPeopleNameAndAge:(NSString *)name andAge:(int)age;
 @end
 
 NS_ASSUME_NONNULL_END

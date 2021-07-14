@@ -38,12 +38,17 @@ int main(int argc, char * argv[]) {
         // 使用new的方式也可以生成一个实例化对象
         People *p2 = [People new];
         
-        p1.peopleName = @"张三";
+        People *p3 = [[People alloc] initWithPeopleNameAndAge:@"王五" andAge:18];
+        
+//        p1.peopleName = @"张三";
         p2.peopleName = @"lisi";
         // 当装饰符为public时, 可以这样进行调用, 但不推荐这样使用
 //        p2->_peopleName;
+        // 默认情况下, 因为初始化的时候回调用init的方法
+        // 所以在不赋值的情况下, 也能够获取到默认的peopleName是张三
         NSLog(@"p1 peoplename %@", p1.peopleName);
         NSLog(@"p2 peoplename %@", p2.peopleName);
+        NSLog(@"p3 peoplename %@", p3.peopleName);
         
         // 调用-号方法的report
         [p1 report];
@@ -52,6 +57,10 @@ int main(int argc, char * argv[]) {
         NSLog(@"p1 --- %p %a", p1, p2);
         NSLog(@"p2 --- %d", p2);
         
+        int a1 = [p1 showWithA:10];
+        int a2 = 20;
+        int a3 = [p2 showWithA:a1 andB: a2];
+        NSLog(@"%d + %d = %d", a1, a2, a3);
         
     }
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理

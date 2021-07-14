@@ -9,7 +9,7 @@
 
 @implementation People
 {
-    int _peopleAge;
+//    int _peopleAge;
     int _peopleSex;
 }
 - (void) report {
@@ -27,13 +27,23 @@ static NSString *_peopleName1;
     _peopleName1 = @"222";
 }
 
+- (int)showWithA:(int)a {
+    return a;
+}
+- (int)showWithA:(int)a andB: (int)b {
+    return a + b;
+}
+
 // 这里需要将成员变量与属性进行一次映射
 // 相当于是建立了属性和成员变量之间的一种映射关系
 // 但是, 因为类实例中, 是可以调用成员变量, 也可以调用属性的
 // 这里如果成员变量和属性如果同名, 就会出现问题
 // 所以一般来讲, 对应属性的成员变量, 我们一般加一个下划线开头, 表示成员变量是仅类内调用的
-@synthesize peopleName = _peopleName;
+//@synthesize peopleName = _peopleName;
+//@synthesize peopleAge = _peopleAge;
 
+// 初始化方法  id类型 可以是任意类型, instancetype 当前类的实例的类型
+// 一般来说, init方法应该使用instancetype类型
 - (instancetype) init {
     self = [super init];
     if (self) {
@@ -47,6 +57,16 @@ static NSString *_peopleName1;
         // 对于没有属性的成员变量, 我们也不需要在声明中书写了, 直接写在.m文件中即可
         
     }
+    return self;
+}
+
+- (instancetype) initWithPeopleNameAndAge:(NSString *)name andAge:(int)age {
+    self = [super init];
+    if (self) {
+        _peopleName = name;
+        _peopleAge = age;
+    }
+    NSLog(@"people age %d", _peopleAge);
     return self;
 }
 
