@@ -14,6 +14,7 @@
 		747A27E22692101400F4253C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747A27E12692101400F4253C /* Assets.xcassets */; };
 		747A27E52692101400F4253C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747A27E32692101400F4253C /* LaunchScreen.storyboard */; };
 		747A27E82692101400F4253C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 747A27E72692101400F4253C /* main.m */; };
+		747E0D55269F1EAA004DC013 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 747E0D54269F1EAA004DC013 /* MyClass.m */; };
 		7483779A269C727200B0F323 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 74837799269C727200B0F323 /* People.m */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		747A27E42692101400F4253C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		747A27E62692101400F4253C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747A27E72692101400F4253C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		747E0D53269F1EAA004DC013 /* MyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		747E0D54269F1EAA004DC013 /* MyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 		74837798269C727200B0F323 /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
 		74837799269C727200B0F323 /* People.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +70,8 @@
 				747A27D52692101300F4253C /* AppDelegate.h */,
 				747A27D62692101300F4253C /* AppDelegate.m */,
 				747A27D82692101300F4253C /* SceneDelegate.h */,
+				747E0D53269F1EAA004DC013 /* MyClass.h */,
+				747E0D54269F1EAA004DC013 /* MyClass.m */,
 				747A27D92692101300F4253C /* SceneDelegate.m */,
 				747A27DB2692101300F4253C /* ViewController.h */,
 				747A27DC2692101300F4253C /* ViewController.m */,
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747E0D55269F1EAA004DC013 /* MyClass.m in Sources */,
 				747A27DD2692101300F4253C /* ViewController.m in Sources */,
 				747A27D72692101300F4253C /* AppDelegate.m in Sources */,
 				7483779A269C727200B0F323 /* People.m in Sources */,

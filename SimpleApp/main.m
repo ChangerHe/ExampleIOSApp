@@ -24,6 +24,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "People.h"
+#import "MyClass.h"
 
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
@@ -61,6 +62,11 @@ int main(int argc, char * argv[]) {
         int a2 = 20;
         int a3 = [p2 showWithA:a1 andB: a2];
         NSLog(@"%d + %d = %d", a1, a2, a3);
+        
+        MyClass *mc = [[MyClass alloc]init];
+        mc.className = @"我的类";
+        [mc report];
+        
         
     }
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理
