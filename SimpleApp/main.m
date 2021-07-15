@@ -65,7 +65,10 @@ int main(int argc, char * argv[]) {
         
         MyClass *mc = [[MyClass alloc]init];
         mc.className = @"我的类";
+        // 如果声明为@public的成员变量, 则只可以通过指向来进行调用
+        mc->_classInt = 1001;
         [mc report];
+        
         
         
     }

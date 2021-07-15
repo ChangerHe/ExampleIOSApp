@@ -11,5 +11,6 @@
 
 - (void) report {
     NSLog(@"classname %@", _className);
+    NSLog(@"classint %d", _classInt);
 }
 @end
