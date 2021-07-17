@@ -28,13 +28,13 @@
 
 @interface SampleClass: NSObject
 
--(int)max:(int)num1 andB:(int)num2;
+-(int)max:(int)num1:(int)num2;
 
 @end
 
 @implementation SampleClass
 
--(int)max:(int)num1 andB:(int)num2 {
+-(int)max:(int)num1:(int)num2 {
     int result;
     if (num1 > num2) {
         result = num1;
@@ -151,7 +151,7 @@ int main(int argc, char * argv[]) {
     int b = 456;
     int ret;
     SampleClass *sampleClass = [[SampleClass alloc] init];
-    ret = [sampleClass max: a andB: b];
+    ret = [sampleClass max: a: b];
     NSLog(@"max value is: %d \n", ret);
     
     
