@@ -24,12 +24,97 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+@protocol SampleClass <NSObject>
+
+-(int)max:(int)num1 andNum2:(int)num2;
+
+@end
+
+@implementation SampleClass
+
+-(int)max:(int)num1 andNum2:(int)num2 {
+    int result;
+    if (num1 > num2) {
+        result = num1;
+    } else {
+        result = num2;
+    }
+    return result;
+}
+
+@end
+
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
+    
+    // Objective-C 语法
+//    一. 类型
+//      类型分为: 基本类型/枚举类型/void类型/派生类型
+//      1. 整数类型
+//    char:  1字节 -128 ~ 127 或 0 ~ 255
+//    unsigned char: 1字节 0 ~ 255
+//    signed char: 1字节 -128 ~ 127
+//    int: 2或4字节 -32,768 ~ 32,767 或 -2,147,483,648 ~ 2,147,483,647
+//    unsigned int: 2或4字节 0 ~ 65,535 或 0 ~ 4,294,967,295
+//    short: 2字节 -32,768 ~ 32,767
+//    unsigned short: 2字节 0 ~ 65,535
+//    long: 4字节 -2,147,483,648 ~ 2,147,483,647
+//    unsigned long: 4字节 0 ~ 4,294,967,295
+    
+    // 使用sizeof, 获取到的是其占用的字节数量
+    NSLog(@"Storage size for int : %d \n", sizeof(int));
+//      2. 浮点类型
+//    float: 4字节 1.2E-38 ~ 3.4E+38 6位小数
+//    double: 8字节 2.3E-308 ~ 1.7E+308 15位小数
+//    long double: 10字节 3.4E-4932 ~ 1.1E+4932 19位小数
+    NSLog(@"Storage size for float : %d , maxval=%f \n", sizeof(float), FLT_MAX);
+//      3. void类型
+//    void类型指定没有可用的值。它用于两种情况: 1.函数指定返回void 2.函数参数为void
+//    二. 变量
+//      1. Objective-C变量定义: type variable_list;
+//          这里，type必须是有效的Objective-C数据类型，它包括：char，w_char，int，float，double，bool或任何用户定义的对象等
+//          variable_list可以包含一个或多个用逗号分隔的标识符名称。下面显示了一些有效的声明
+//            int    i, j, k;
+//            char   c, ch;
+//            float  f, salary;
+//            double d;
+//        同时, 我们也可以为变量声明一个值
+//            extern int d = 2, f = 3;
+//            int d = 3, f = 5;
+//            byte z = 22;
+//            char x = 'x';
+//      2.  使用extern关键字在任何地方声明变量。 虽然可以在Objective-C程序中多次声明变量，但它只能在文件，函数或代码块中定义一次。
+//    三. 常量
+//        1. 常用常量
+//      212, 215u, 0xFeeL, 3.14159, 314159E-5L // 这些都是合法有效的常量
+//       \\ , \', , \a 警报, \b 退格, \f 换页, \n 换行, \r 回车, , \t 水平制表, \v 垂直制表, \ooo 八进制的一到三位数
+//        NSLog(@"Yiibai\t.com\n\n"); // Yiibai    .com
+//        2. 定义常量
+//          可以使用#define预处理器 或者使用const关键字。
+    
+    // 定义常量 ???
+    const int  LENGTH = 10;
+    const int  WIDTH  = 15;
+            int area = LENGTH * WIDTH;
+    NSLog(@"value of area : %d");
+    // 使用const关键字作为前缀来声明具有特定类型的常量，如下所示 -
+//    const type variable = value;
+    
+//    四. 函数
+    int a = 123;
+    int b = 456;
+    int ret;
+    SampleClass *SampleClass = [[SampleClass alloc] init];
+    ret = [SampleClass max: 111: andNum2: 222];
+    NSLog(@"max value is: %d \n", ret);
+    
+    
+    
+    
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理
     //     argc: 参数个数
     //     argv: 参数
@@ -37,4 +122,5 @@ int main(int argc, char * argv[]) {
     //     delegateClassName 该参数指定AppDelegate类作为委托, delegate对象主要用于监听, 类似于生命周期的回调函数
     //     返回: 返回值为int, 但是并不会返回(runloop), 会一直在内存中 直到程序终止
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
+
 }
