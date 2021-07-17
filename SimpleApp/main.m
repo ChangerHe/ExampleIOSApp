@@ -26,25 +26,25 @@
 #import "People.h"
 #import "MyClass.h"
 
-@protocol SampleClass <NSObject>
-
--(int)max:(int)num1 andNum2:(int)num2;
-
-@end
-
-@implementation SampleClass
-
--(int)max:(int)num1 andNum2:(int)num2 {
-    int result;
-    if (num1 > num2) {
-        result = num1;
-    } else {
-        result = num2;
-    }
-    return result;
-}
-
-@end
+//@protocol SampleClass <NSObject>
+//
+//-(int)max:(int)num1 andNum2:(int)num2;
+//
+//@end
+//
+//@implementation SampleClass : NSObject
+//
+//-(int)max:(int)num1 andNum2:(int)num2 {
+//    int result;
+//    if (num1 > num2) {
+//        result = num1;
+//    } else {
+//        result = num2;
+//    }
+//    return result;
+//}
+//
+//@end
 
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
@@ -147,12 +147,12 @@ int main(int argc, char * argv[]) {
 //    const type variable = value;
     
 //    四. 函数
-    int a = 123;
-    int b = 456;
-    int ret;
-    SampleClass *SampleClass = [[SampleClass alloc] init];
-    ret = [SampleClass max: 111: andNum2: 222];
-    NSLog(@"max value is: %d \n", ret);
+//    int a = 123;
+//    int b = 456;
+//    int ret;
+//    SampleClass *SampleClass = [[SampleClass alloc] init];
+//    ret = [SampleClass max: 111: andNum2: 222];
+//    NSLog(@"max value is: %d \n", ret);
     
     
     
