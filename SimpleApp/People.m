@@ -12,6 +12,10 @@
 //    int _peopleAge;
     int _peopleSex;
 }
+
+@synthesize test1;
+@synthesize test2;
+
 - (void) report {
     NSLog(@"-号: report");
     // 在实例方法中也可以调用类方法
@@ -49,7 +53,10 @@ static NSString *_peopleName1;
     if (self) {
         // 在类内, 需要调用成员变量而不是属性, 属性是给类外使用的
         _peopleName = @"张三";
-        
+        _test1 = @"test1";
+        _test3 = @"test3";
+//        _test2 = @"test2";
+//        NSLog(@"test1 and test2 %@ %@", _test1. _test2);
         // 在新版本的ios中, 属性的成员变量不需要我们自己来声明, 而是在我们声明了属性之后, 成员变量自动生成
         // 也就意味着, 我们声明了@property(nonatomic, strong)NSString *peopleName;
         // 那么成员变量会自动生成一个*_peopleName

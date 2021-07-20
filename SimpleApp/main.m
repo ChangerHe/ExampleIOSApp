@@ -77,6 +77,8 @@ int main(int argc, char * argv[]) {
         [People test];
         NSLog(@"p1 --- %p %a", p1, p2);
         NSLog(@"p2 --- %d", p2);
+        NSLog(@"p1 test1 --- %@", p1.test1);
+        NSLog(@"p2 test3 --- %@", p2.test3);
         
         int a1 = [p1 showWithA:10];
         int a2 = 20;
