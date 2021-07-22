@@ -25,6 +25,7 @@
 #import "AppDelegate.h"
 #import "People.h"
 #import "MyClass.h"
+#import "People+Test.h"
 
 @interface SampleClass: NSObject
 
@@ -79,6 +80,12 @@ int main(int argc, char * argv[]) {
         NSLog(@"p2 --- %d", p2);
         NSLog(@"p1 test1 --- %@", [p1 test1]);
         NSLog(@"p2 test3 --- %@", p2.test3);
+        // 使用类的扩展, 引入类的扩展的声明之后, 类的扩展方法就可以直接调用了
+        // 但是需要注意的是, 类的扩展中, 不能扩展内置变量
+        // 同时, 有些情况下, 基类有内置变量, 但是没有getter和setter方法时, 可以在扩展类中定义对应内置变量的属性
+        // 扩展类中定义了内置变量的属性之后, 就可以使用这个内置变量了
+        [p1 extendTest];
+        
         
         int a1 = [p1 showWithA:10];
         int a2 = 20;
