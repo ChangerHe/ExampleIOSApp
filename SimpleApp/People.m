@@ -46,6 +46,11 @@ static NSString *_peopleName1;
     return a + b;
 }
 
+
+- (void) showBook {
+    NSLog(@"we had book: %@, price: @ld", self.book.name, self.book.price);
+}
+
 // 这里需要将成员变量与属性进行一次映射
 // 相当于是建立了属性和成员变量之间的一种映射关系
 // 但是, 因为类实例中, 是可以调用成员变量, 也可以调用属性的

@@ -86,6 +86,17 @@ int main(int argc, char * argv[]) {
         // 扩展类中定义了内置变量的属性之后, 就可以使用这个内置变量了
         [p1 extendTest];
         
+        // 注意 这样子调用赋值是不行的, 赋值不上去, 每个对象都需要独立进行声明之后赋值
+        p1.book.name = @"测试书";
+        [p1 showBook];
+        
+        // 只有声明之后的对象, 才可以被修改和赋值调用
+        Book *book1 = [Book new];
+        book1.name = @"测试书";
+        book1.price = 13;
+        p1.book = book1;
+        [p1 showBook];
+        
         
         int a1 = [p1 showWithA:10];
         int a2 = 20;

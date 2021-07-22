@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Book.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
     NSString *_peopleName;
     
     NSString *_test1;
+    
+    
     // 新版可以直接写在.m文件中
 //    int _peopleAge;
 //    int _peopleSex;
@@ -27,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 所以 当我们需要使用这个名称的时候, 需要进行一次指向操作, 指向成员变量的对应值
 @property(nonatomic, strong)NSString *peopleName;
 @property(nonatomic, readwrite)NSInteger *peopleAge;
+@property(strong, nonatomic) Book* book;
 
 // 如果属性使用了assign + nonatomic, 代表使用的是老版本的声明方式, 这个时候可选的在类内声明属性
 // 但是, 如果需要在外部调用, 必须要在.m文件中使用@synthesize来声明一次
@@ -44,6 +48,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 带参方法
 - (int)showWithA:(int)a;
 - (int)showWithA:(int)a andB: (int)b;
+
+- (void) showBook;
 
 - (instancetype)initWithPeopleNameAndAge:(NSString *)name andAge:(int)age;
 @end

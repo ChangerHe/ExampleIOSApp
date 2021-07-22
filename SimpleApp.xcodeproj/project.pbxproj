@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		743B978E26A9C38800786266 /* People+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 743B978D26A9C38800786266 /* People+Test.m */; };
+		743B979126A9CFB600786266 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 743B979026A9CFB600786266 /* Book.m */; };
 		747A27D72692101300F4253C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 747A27D62692101300F4253C /* AppDelegate.m */; };
 		747A27DA2692101300F4253C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 747A27D92692101300F4253C /* SceneDelegate.m */; };
 		747A27DD2692101300F4253C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 747A27DC2692101300F4253C /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* Begin PBXFileReference section */
 		743B978C26A9C38800786266 /* People+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "People+Test.h"; sourceTree = "<group>"; };
 		743B978D26A9C38800786266 /* People+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "People+Test.m"; sourceTree = "<group>"; };
+		743B978F26A9CFB600786266 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		743B979026A9CFB600786266 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		747A27D22692101300F4253C /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		747A27D52692101300F4253C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		747A27D62692101300F4253C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				747A27E62692101400F4253C /* Info.plist */,
 				747A27E72692101400F4253C /* main.m */,
 				74837798269C727200B0F323 /* People.h */,
+				743B978F26A9CFB600786266 /* Book.h */,
+				743B979026A9CFB600786266 /* Book.m */,
 				743B978C26A9C38800786266 /* People+Test.h */,
 				743B978D26A9C38800786266 /* People+Test.m */,
 				74837799269C727200B0F323 /* People.m */,
@@ -164,6 +169,7 @@
 				743B978E26A9C38800786266 /* People+Test.m in Sources */,
 				747A27DD2692101300F4253C /* ViewController.m in Sources */,
 				747A27D72692101300F4253C /* AppDelegate.m in Sources */,
+				743B979126A9CFB600786266 /* Book.m in Sources */,
 				7483779A269C727200B0F323 /* People.m in Sources */,
 				747A27E82692101400F4253C /* main.m in Sources */,
 				747A27DA2692101300F4253C /* SceneDelegate.m in Sources */,
