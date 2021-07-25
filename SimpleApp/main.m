@@ -175,8 +175,29 @@ int main(int argc, char * argv[]) {
     ret = [sampleClass max: a: b];
     NSLog(@"max value is: %d \n", ret);
     
+    // Fundation常用的方法
+    //    1. NSString
+    NSString *str0 = @"1948 beijing";
+    NSString *str1 = [NSString stringWithFormat:@"%d beijing", 1948];
+    NSLog(@"string with formated value: %@", str1);
+    NSString *str2 = [[NSString alloc] initWithFormat:@"%d beijing", 1987];
+    NSLog(@"string init with formated value: %@", str2);
+    NSUInteger length = str1.length;
+    NSLog(@"nsu integer str1 length: %ld, and normal length: %ld", length, [str1 length]);
+    BOOL isEqual = [str0 isEqualToString:str1];
+    BOOL isNormalEqual = [str0 isEqual:str1];
+    NSLog(@"str0 and str1 is equal: %d, normal equal: %d", isEqual, isNormalEqual);
+    if (isNormalEqual) {
+        NSLog(@"相等");
+    }
     
-    
+    //    2. NSMutableArray  可变数组
+    //       NSMutableArray 可以存放任意类型的对象
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    [array addObject:@"obj1"];
+    [array addObject:@"obj2"];
+    [array removeObjectAtIndex:0];
+    NSLog(@"get array index 0: %@", array[0]); // obj2 因为obj1已经删除
     
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理
     //     argc: 参数个数
