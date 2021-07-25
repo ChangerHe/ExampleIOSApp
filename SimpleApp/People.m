@@ -90,4 +90,9 @@ static NSString *_peopleName1;
     return self;
 }
 
+// 通过重写description的方式, 可以重写打印当前%@值的返回值内容
+- (NSString *) description {
+    return [NSString stringWithFormat:@"name: %@", self.peopleName];
+}
+
 @end

@@ -96,6 +96,7 @@ int main(int argc, char * argv[]) {
         book1.price = 13;
         p1.book = book1;
         [p1 showBook];
+        NSLog(@"people description formatted value is: %@", p1);
         
         
         int a1 = [p1 showWithA:10];
