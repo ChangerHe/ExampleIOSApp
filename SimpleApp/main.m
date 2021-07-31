@@ -199,6 +199,11 @@ int main(int argc, char * argv[]) {
     [array removeObjectAtIndex:0];
     NSLog(@"get array index 0: %@", array[0]); // obj2 因为obj1已经删除
     
+    // 读取沙盒
+    NSString* documentPath = NSHomeDirectory();
+    NSLog(@"documentPath = %@", documentPath);
+    
+    
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理
     //     argc: 参数个数
     //     argv: 参数
