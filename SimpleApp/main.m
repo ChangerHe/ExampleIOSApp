@@ -201,8 +201,19 @@ int main(int argc, char * argv[]) {
     
     // 读取沙盒
     NSString* documentPath = NSHomeDirectory();
-    NSLog(@"documentPath = %@", documentPath);
     
+    // 拼接路径
+    NSString* directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    // 住: 拼接路径可被读写的  只有Document
+    NSLog(@"documentPath = %@, directory is =", documentPath, directory);
+    // 读取应用程序束
+    NSString* routeFilePath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
+    NSString* myData = [@"赵"];
+    
+    [[NSArray* datasource = [NSArray arrayWithContentsOfFile, dicumentPath];
+    
+    NSLog(@"routeFilePath =  %@", routeFilePath);
+    BOOL result = myData writeToFile:@"routeFilePath" atomically:YES encoding:<#(NSStringEncoding)#> error:<#(NSError *__autoreleasing  _Nullable * _Nullable)#>
     
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理
     //     argc: 参数个数
