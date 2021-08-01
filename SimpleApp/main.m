@@ -208,14 +208,38 @@ int main(int argc, char * argv[]) {
     NSLog(@"documentPath = %@, directory is =", documentPath, directory);
     // 读取应用程序束
     NSString* routeFilePath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
-    NSString* myData = [@"赵"];
+    NSString* myData = @"赵";
     
-    [[NSArray* datasource = [NSArray arrayWithContentsOfFile, dicumentPath];
+    NSArray* datasource = [NSArray arrayWithContentsOfFile: routeFilePath];
     
     NSLog(@"routeFilePath =  %@", routeFilePath);
-    BOOL result = myData writeToFile:@"routeFilePath" atomically:YES encoding:<#(NSStringEncoding)#> error:<#(NSError *__autoreleasing  _Nullable * _Nullable)#>
+    NSLog(@"datasource =  %@", datasource);
     
-    // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理
+    // 错误处理
+    @try {
+        YES == nil;
+    } @catch (NSException *exception) {
+        NSLog(@"error happened: %@", exception);
+    } @finally {
+        NSLog(@"goto here whenever error happened");
+    }
+    
+    // 时间处理
+    NSDate* now = [NSDate date];
+    NSLog(@"current time is: %@", now);
+    // 超过当前时间的一段时间
+    NSDate* offsetNow = [now dateByAddingTimeInterval:16*60];
+    NSLog(@"time offset 16min is: %@", offsetNow);
+    // 计算两个时间中的差值
+    NSTimeInterval offsetTime = [offsetNow timeIntervalSinceDate:now];
+    NSLog(@"time between two time: %f", offsetTime);
+    // 日期格式化
+    NSDateFormatter* dateFormatter = [NSDateFormatter new];
+    [dateFormatter setDateFormat:@"YYYY年MM月dd日 HH:mm:ss"];
+    NSString* dateString = [dateFormatter stringFromDate:now];
+    NSLog(@"current formatted date is: %@", dateString);
+    
+    // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理s
     //     argc: 参数个数
     //     argv: 参数
     //     principalClassName 根据该参数初始化一个UIApplication或其子类的对象并开始接收事件(传入nil, 意味使用默认的UIApplication)
