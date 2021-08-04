@@ -21,6 +21,7 @@
 		7492ED3D26BAC8F400795975 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7492ED3C26BAC8F400795975 /* Dog.m */; };
 		7492ED4026BAC97F00795975 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7492ED3F26BAC97F00795975 /* Person.m */; };
 		7492ED4326BACB9600795975 /* BigDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7492ED4226BACB9600795975 /* BigDog.m */; };
+		7492ED4726BACD9B00795975 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 7492ED4626BACD9B00795975 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,9 @@
 		7492ED3F26BAC97F00795975 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		7492ED4126BACB9600795975 /* BigDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigDog.h; sourceTree = "<group>"; };
 		7492ED4226BACB9600795975 /* BigDog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigDog.m; sourceTree = "<group>"; };
+		7492ED4426BACCF400795975 /* WorkerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkerDelegate.h; sourceTree = "<group>"; };
+		7492ED4526BACD9B00795975 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		7492ED4626BACD9B00795975 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,9 @@
 				747A27E32692101400F4253C /* LaunchScreen.storyboard */,
 				747A27E62692101400F4253C /* Info.plist */,
 				747A27E72692101400F4253C /* main.m */,
+				7492ED4426BACCF400795975 /* WorkerDelegate.h */,
+				7492ED4526BACD9B00795975 /* Student.h */,
+				7492ED4626BACD9B00795975 /* Student.m */,
 				7492ED3B26BAC8F400795975 /* Dog.h */,
 				7492ED3C26BAC8F400795975 /* Dog.m */,
 				7492ED3E26BAC97F00795975 /* Person.h */,
@@ -191,6 +198,7 @@
 				7483779A269C727200B0F323 /* People.m in Sources */,
 				747A27E82692101400F4253C /* main.m in Sources */,
 				747A27DA2692101300F4253C /* SceneDelegate.m in Sources */,
+				7492ED4726BACD9B00795975 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

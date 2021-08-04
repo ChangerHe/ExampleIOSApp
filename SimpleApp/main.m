@@ -28,6 +28,7 @@
 #import "People+Test.h"
 #import "Person.h"
 #import "BigDog.h"
+#import "Student.h"
 
 @interface SampleClass: NSObject
 
@@ -247,6 +248,11 @@ int main(int argc, char * argv[]) {
     person1.delegate = bigDog;
     
     [person1 lootAtHome];
+    
+    Student* student1 = [Student new];
+    [student1 coding];
+    [student1 readWords];
+    [student1 debug];
     
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理s
     //     argc: 参数个数
