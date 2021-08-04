@@ -249,6 +249,7 @@ int main(int argc, char * argv[]) {
     
     [person1 lootAtHome];
     
+    // 定义了协议的类, 需要完成协议对应的属性和方法
     Student* student1 = [Student new];
     [student1 coding];
     [student1 readWords];
