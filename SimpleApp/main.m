@@ -26,6 +26,8 @@
 #import "People.h"
 #import "MyClass.h"
 #import "People+Test.h"
+#import "Person.h"
+#import "BigDog.h"
 
 @interface SampleClass: NSObject
 
@@ -238,6 +240,13 @@ int main(int argc, char * argv[]) {
     [dateFormatter setDateFormat:@"YYYY年MM月dd日 HH:mm:ss"];
     NSString* dateString = [dateFormatter stringFromDate:now];
     NSLog(@"current formatted date is: %@", dateString);
+    
+    Person* person1 = [Person new];
+    BigDog* bigDog = [BigDog new];
+    // 使用delegate属性, 挂载对应的对象, 从而达到使用对应对象的相应方法或者属性的目的
+    person1.delegate = bigDog;
+    
+    [person1 lootAtHome];
     
     // UIApplicationMain: 这个方法会初始化一个UIApplication实例以及他的代理s
     //     argc: 参数个数
